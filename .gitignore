@@ -1,0 +1,90 @@
+# Compiled class files
+*.class
+target/
+build/
+out/
+*.jar
+*.war
+*.ear
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Node modules and frontend build
+node_modules/
+dist/
+.angular/
+*.tsbuildinfo
+
+# Maven
+.mvn/
+mvnw
+mvn.cmd
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Temporary files and documentation created during debugging
+*_FIXED*.md
+*_RUNNING*.md
+STATUS_*.md
+API_FIXED.md
+FIXED_FINAL.md
+FRONTEND_RUNNING.md
+SERVICES_RUNNING.md
+PROJECT_BUILD_STATUS.md
+OLLAMA_*.md
+TEST_OPENAI_INTEGRATION.md
+launch-substitution.bat
+start-services-with-openai.bat
+start-all-services.bat
+start-substitution-service.bat
+*.bat
+
+# Test files
+test-*.json
+test-*.html
+
+# Backup files
+*.bak
+*.original
+
+# Cache
+.cache/
+*.cache
+
+# Database
+*.db
+*.sqlite
+
+# Spring Boot
+application-*.yml
+application-*.properties
+!application.yml
+!application.properties
+
+# Project-specific folders to exclude
+infrastructure/
+web-bundles/
+performance-tests/

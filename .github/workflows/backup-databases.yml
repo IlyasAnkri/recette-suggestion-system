@@ -1,0 +1,51 @@
+name: Weekly Database Backup
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Every Sunday at 2 AM UTC
+  workflow_dispatch:
+
+jobs:
+  backup:
+    name: Backup Databases
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install MongoDB tools
+        run: |
+          wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -
+          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-database-tools
+      
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get install -y postgresql-client
+      
+      - name: Run backup script
+        run: |
+          chmod +x scripts/backup-databases.sh
+          ./scripts/backup-databases.sh
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      - name: Upload backup artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: database-backups-${{ github.run_number }}
+          path: backup_*.tar.gz
+          retention-days: 30
+      
+      - name: Notify on failure
+        if: failure()
+        run: |
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d '{"text":"❌ Database backup failed"}'

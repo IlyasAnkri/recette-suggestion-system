@@ -1,0 +1,29 @@
+schema: 1
+story: "6.5"
+story_title: "Story 6.5: Add Recipe Image Upload and Storage"
+gate: "CONCERNS"
+status_reason: "Image upload controller/service and validation logic exist, but Cloudinary integration, transformations, and moderation are still TODOs and have no automated tests."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-12-21T17:46:00Z"
+waiver: { active: false }
+top_issues:
+  - id: "IMG-001"
+    severity: high
+    finding: "Actual Cloudinary SDK integration is deferred; endpoints rely on placeholders and configuration TODOs."
+    suggested_action: "Wire in real Cloudinary SDK with externalized credentials and verify basic happy-path upload/delete flows."
+  - id: "IMG-002"
+    severity: medium
+    finding: "Image resizing and moderation behavior are not yet implemented, only planned via TODO comments."
+    suggested_action: "Implement thumbnail/full-size transformations and at least basic moderation flagging, and cover them with tests."
+risk_summary:
+  totals: { critical: 0, high: 1, medium: 1, low: 0 }
+  recommendations:
+    must_fix:
+      - "Complete Cloudinary integration and add tests before exposing this endpoint in production environments."
+    monitor:
+      - "Monitor storage usage and error rates once Cloudinary is live; add alerting for upload failures."
+recommendations:
+  immediate:
+    - "Introduce integration tests or contract tests using a Cloudinary test account or a well-behaved mock."
+  future:
+    - "Consider server-side content scanning for additional safety beyond Cloudinary moderation."

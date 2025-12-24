@@ -1,0 +1,514 @@
+[
+  {
+    "name": "chicken breast",
+    "aliases": ["chicken", "chicken fillet", "poultry"],
+    "category": "PROTEIN",
+    "commonUnits": ["g", "kg", "lb", "oz", "piece"],
+    "shelfLife": {"pantry": 0, "refrigerated": 2, "frozen": 365},
+    "flavorProfile": ["savory", "mild"]
+  },
+  {
+    "name": "ground beef",
+    "aliases": ["beef mince", "minced beef", "hamburger meat"],
+    "category": "PROTEIN",
+    "commonUnits": ["g", "kg", "lb", "oz"],
+    "shelfLife": {"pantry": 0, "refrigerated": 2, "frozen": 120},
+    "flavorProfile": ["savory", "rich"]
+  },
+  {
+    "name": "salmon",
+    "aliases": ["salmon fillet", "fish"],
+    "category": "PROTEIN",
+    "commonUnits": ["g", "kg", "lb", "oz", "fillet"],
+    "shelfLife": {"pantry": 0, "refrigerated": 2, "frozen": 90},
+    "flavorProfile": ["savory", "rich", "fatty"]
+  },
+  {
+    "name": "tofu",
+    "aliases": ["bean curd", "soy tofu"],
+    "category": "PROTEIN",
+    "commonUnits": ["g", "kg", "block"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["mild", "neutral"]
+  },
+  {
+    "name": "eggs",
+    "aliases": ["egg", "chicken eggs"],
+    "category": "PROTEIN",
+    "commonUnits": ["whole", "dozen"],
+    "shelfLife": {"pantry": 0, "refrigerated": 35, "frozen": 0},
+    "flavorProfile": ["savory", "rich"]
+  },
+  {
+    "name": "spinach",
+    "aliases": ["greens", "leafy greens", "baby spinach"],
+    "category": "VEGETABLE",
+    "commonUnits": ["g", "cup", "bunch"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["earthy", "mild"]
+  },
+  {
+    "name": "tomato",
+    "aliases": ["tomatoes", "fresh tomato"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 5, "refrigerated": 10, "frozen": 90},
+    "flavorProfile": ["sweet", "acidic", "umami"]
+  },
+  {
+    "name": "onion",
+    "aliases": ["yellow onion", "white onion", "onions"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 30, "refrigerated": 60, "frozen": 180},
+    "flavorProfile": ["pungent", "sweet"]
+  },
+  {
+    "name": "garlic",
+    "aliases": ["garlic cloves", "fresh garlic"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cloves", "tsp", "tbsp", "bulb"],
+    "shelfLife": {"pantry": 90, "refrigerated": 180, "frozen": 365},
+    "flavorProfile": ["pungent", "savory"]
+  },
+  {
+    "name": "bell pepper",
+    "aliases": ["pepper", "sweet pepper", "capsicum"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["sweet", "crisp"]
+  },
+  {
+    "name": "carrot",
+    "aliases": ["carrots"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 30, "frozen": 365},
+    "flavorProfile": ["sweet", "earthy"]
+  },
+  {
+    "name": "broccoli",
+    "aliases": ["broccoli florets"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cup", "g", "head"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["earthy", "slightly bitter"]
+  },
+  {
+    "name": "cucumber",
+    "aliases": ["cucumbers"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 0},
+    "flavorProfile": ["fresh", "mild", "watery"]
+  },
+  {
+    "name": "lettuce",
+    "aliases": ["salad greens", "leafy greens", "iceberg lettuce"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cup", "head", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 0},
+    "flavorProfile": ["fresh", "mild", "crisp"]
+  },
+  {
+    "name": "potato",
+    "aliases": ["potatoes", "russet potato"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g", "lb"],
+    "shelfLife": {"pantry": 60, "refrigerated": 90, "frozen": 365},
+    "flavorProfile": ["starchy", "mild"]
+  },
+  {
+    "name": "zucchini",
+    "aliases": ["courgette", "zucchinis"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["mild", "slightly sweet"]
+  },
+  {
+    "name": "mushroom",
+    "aliases": ["mushrooms", "button mushrooms"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cup", "g", "whole"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["umami", "earthy"]
+  },
+  {
+    "name": "kale",
+    "aliases": ["greens", "leafy greens"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cup", "bunch", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["earthy", "slightly bitter"]
+  },
+  {
+    "name": "eggplant",
+    "aliases": ["aubergine"],
+    "category": "VEGETABLE",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["mild", "slightly bitter"]
+  },
+  {
+    "name": "cauliflower",
+    "aliases": ["cauliflower florets"],
+    "category": "VEGETABLE",
+    "commonUnits": ["cup", "g", "head"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["mild", "slightly sweet"]
+  },
+  {
+    "name": "apple",
+    "aliases": ["apples"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 7, "refrigerated": 30, "frozen": 365},
+    "flavorProfile": ["sweet", "tart"]
+  },
+  {
+    "name": "banana",
+    "aliases": ["bananas"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 5, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["sweet", "creamy"]
+  },
+  {
+    "name": "lemon",
+    "aliases": ["lemons", "lemon juice"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "tbsp", "tsp", "ml"],
+    "shelfLife": {"pantry": 7, "refrigerated": 30, "frozen": 180},
+    "flavorProfile": ["sour", "acidic", "citrus"]
+  },
+  {
+    "name": "lime",
+    "aliases": ["limes", "lime juice"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "tbsp", "tsp", "ml"],
+    "shelfLife": {"pantry": 7, "refrigerated": 30, "frozen": 180},
+    "flavorProfile": ["sour", "acidic", "citrus"]
+  },
+  {
+    "name": "orange",
+    "aliases": ["oranges"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "ml"],
+    "shelfLife": {"pantry": 7, "refrigerated": 14, "frozen": 180},
+    "flavorProfile": ["sweet", "citrus"]
+  },
+  {
+    "name": "strawberry",
+    "aliases": ["strawberries"],
+    "category": "FRUIT",
+    "commonUnits": ["cup", "g", "whole"],
+    "shelfLife": {"pantry": 0, "refrigerated": 5, "frozen": 365},
+    "flavorProfile": ["sweet", "tart"]
+  },
+  {
+    "name": "blueberry",
+    "aliases": ["blueberries"],
+    "category": "FRUIT",
+    "commonUnits": ["cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["sweet", "tart"]
+  },
+  {
+    "name": "avocado",
+    "aliases": ["avocados"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 3, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["creamy", "mild", "buttery"]
+  },
+  {
+    "name": "mango",
+    "aliases": ["mangos", "mangoes"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 5, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["sweet", "tropical"]
+  },
+  {
+    "name": "pineapple",
+    "aliases": ["pineapples"],
+    "category": "FRUIT",
+    "commonUnits": ["whole", "cup", "g"],
+    "shelfLife": {"pantry": 3, "refrigerated": 7, "frozen": 365},
+    "flavorProfile": ["sweet", "tart", "tropical"]
+  },
+  {
+    "name": "milk",
+    "aliases": ["whole milk", "dairy milk"],
+    "category": "DAIRY",
+    "commonUnits": ["ml", "cup", "l"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 90},
+    "flavorProfile": ["creamy", "mild"]
+  },
+  {
+    "name": "butter",
+    "aliases": ["unsalted butter", "salted butter"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "tbsp", "cup"],
+    "shelfLife": {"pantry": 0, "refrigerated": 90, "frozen": 365},
+    "flavorProfile": ["rich", "creamy"]
+  },
+  {
+    "name": "cheddar cheese",
+    "aliases": ["cheese", "cheddar"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "cup", "slice"],
+    "shelfLife": {"pantry": 0, "refrigerated": 30, "frozen": 180},
+    "flavorProfile": ["savory", "sharp"]
+  },
+  {
+    "name": "mozzarella cheese",
+    "aliases": ["mozzarella", "cheese"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "cup", "ball"],
+    "shelfLife": {"pantry": 0, "refrigerated": 14, "frozen": 180},
+    "flavorProfile": ["mild", "creamy"]
+  },
+  {
+    "name": "parmesan cheese",
+    "aliases": ["parmesan", "parmigiano", "cheese"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "tbsp", "cup"],
+    "shelfLife": {"pantry": 0, "refrigerated": 60, "frozen": 365},
+    "flavorProfile": ["savory", "nutty", "umami"]
+  },
+  {
+    "name": "feta cheese",
+    "aliases": ["feta", "cheese"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "cup", "crumbles"],
+    "shelfLife": {"pantry": 0, "refrigerated": 30, "frozen": 90},
+    "flavorProfile": ["salty", "tangy"]
+  },
+  {
+    "name": "yogurt",
+    "aliases": ["plain yogurt", "greek yogurt"],
+    "category": "DAIRY",
+    "commonUnits": ["ml", "cup", "g"],
+    "shelfLife": {"pantry": 0, "refrigerated": 14, "frozen": 60},
+    "flavorProfile": ["tangy", "creamy"]
+  },
+  {
+    "name": "heavy cream",
+    "aliases": ["cream", "whipping cream"],
+    "category": "DAIRY",
+    "commonUnits": ["ml", "cup"],
+    "shelfLife": {"pantry": 0, "refrigerated": 7, "frozen": 90},
+    "flavorProfile": ["rich", "creamy"]
+  },
+  {
+    "name": "sour cream",
+    "aliases": ["soured cream"],
+    "category": "DAIRY",
+    "commonUnits": ["ml", "cup", "tbsp"],
+    "shelfLife": {"pantry": 0, "refrigerated": 14, "frozen": 60},
+    "flavorProfile": ["tangy", "creamy"]
+  },
+  {
+    "name": "cream cheese",
+    "aliases": ["soft cheese"],
+    "category": "DAIRY",
+    "commonUnits": ["g", "oz", "tbsp"],
+    "shelfLife": {"pantry": 0, "refrigerated": 30, "frozen": 60},
+    "flavorProfile": ["tangy", "creamy"]
+  },
+  {
+    "name": "rice",
+    "aliases": ["white rice", "long grain rice"],
+    "category": "GRAIN",
+    "commonUnits": ["cup", "g", "kg"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["mild", "starchy"]
+  },
+  {
+    "name": "pasta",
+    "aliases": ["spaghetti", "noodles"],
+    "category": "GRAIN",
+    "commonUnits": ["g", "kg", "oz"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["mild", "starchy"]
+  },
+  {
+    "name": "bread",
+    "aliases": ["loaf", "sliced bread"],
+    "category": "GRAIN",
+    "commonUnits": ["slice", "loaf"],
+    "shelfLife": {"pantry": 5, "refrigerated": 14, "frozen": 180},
+    "flavorProfile": ["mild", "yeasty"]
+  },
+  {
+    "name": "flour",
+    "aliases": ["all-purpose flour", "wheat flour"],
+    "category": "GRAIN",
+    "commonUnits": ["cup", "g", "kg"],
+    "shelfLife": {"pantry": 365, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["mild", "neutral"]
+  },
+  {
+    "name": "oats",
+    "aliases": ["rolled oats", "oatmeal"],
+    "category": "GRAIN",
+    "commonUnits": ["cup", "g"],
+    "shelfLife": {"pantry": 365, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["mild", "nutty"]
+  },
+  {
+    "name": "quinoa",
+    "aliases": [],
+    "category": "GRAIN",
+    "commonUnits": ["cup", "g"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["nutty", "earthy"]
+  },
+  {
+    "name": "salt",
+    "aliases": ["table salt", "sea salt"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp", "pinch"],
+    "shelfLife": {"pantry": 3650, "refrigerated": 3650, "frozen": 3650},
+    "flavorProfile": ["salty"]
+  },
+  {
+    "name": "black pepper",
+    "aliases": ["pepper", "ground black pepper"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp", "pinch"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["spicy", "pungent"]
+  },
+  {
+    "name": "cumin",
+    "aliases": ["ground cumin"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["earthy", "warm"]
+  },
+  {
+    "name": "paprika",
+    "aliases": ["sweet paprika"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["sweet", "smoky"]
+  },
+  {
+    "name": "chili powder",
+    "aliases": ["chilli powder"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["spicy", "hot"]
+  },
+  {
+    "name": "oregano",
+    "aliases": ["dried oregano"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["earthy", "pungent"]
+  },
+  {
+    "name": "basil",
+    "aliases": ["fresh basil", "dried basil"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp", "leaves"],
+    "shelfLife": {"pantry": 730, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["sweet", "peppery"]
+  },
+  {
+    "name": "thyme",
+    "aliases": ["dried thyme", "fresh thyme"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp", "sprig"],
+    "shelfLife": {"pantry": 730, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["earthy", "minty"]
+  },
+  {
+    "name": "cinnamon",
+    "aliases": ["ground cinnamon"],
+    "category": "SPICE",
+    "commonUnits": ["tsp", "tbsp"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["sweet", "warm"]
+  },
+  {
+    "name": "ginger",
+    "aliases": ["fresh ginger", "ginger root"],
+    "category": "SPICE",
+    "commonUnits": ["tbsp", "tsp", "inch"],
+    "shelfLife": {"pantry": 0, "refrigerated": 21, "frozen": 180},
+    "flavorProfile": ["spicy", "warm", "pungent"]
+  },
+  {
+    "name": "olive oil",
+    "aliases": ["extra virgin olive oil", "oil"],
+    "category": "OIL",
+    "commonUnits": ["tbsp", "tsp", "ml", "cup"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 0},
+    "flavorProfile": ["fruity", "rich"]
+  },
+  {
+    "name": "vegetable oil",
+    "aliases": ["cooking oil", "oil"],
+    "category": "OIL",
+    "commonUnits": ["tbsp", "tsp", "ml", "cup"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 0},
+    "flavorProfile": ["neutral"]
+  },
+  {
+    "name": "sesame oil",
+    "aliases": ["toasted sesame oil"],
+    "category": "OIL",
+    "commonUnits": ["tbsp", "tsp", "ml"],
+    "shelfLife": {"pantry": 365, "refrigerated": 730, "frozen": 0},
+    "flavorProfile": ["nutty", "toasted"]
+  },
+  {
+    "name": "soy sauce",
+    "aliases": ["shoyu"],
+    "category": "CONDIMENT",
+    "commonUnits": ["tbsp", "tsp", "ml"],
+    "shelfLife": {"pantry": 730, "refrigerated": 1095, "frozen": 0},
+    "flavorProfile": ["salty", "umami"]
+  },
+  {
+    "name": "tomato sauce",
+    "aliases": ["marinara sauce", "pasta sauce"],
+    "category": "CONDIMENT",
+    "commonUnits": ["ml", "cup", "can"],
+    "shelfLife": {"pantry": 730, "refrigerated": 7, "frozen": 180},
+    "flavorProfile": ["savory", "acidic", "umami"]
+  },
+  {
+    "name": "honey",
+    "aliases": [],
+    "category": "SWEETENER",
+    "commonUnits": ["tbsp", "tsp", "ml"],
+    "shelfLife": {"pantry": 3650, "refrigerated": 3650, "frozen": 0},
+    "flavorProfile": ["sweet", "floral"]
+  },
+  {
+    "name": "sugar",
+    "aliases": ["white sugar", "granulated sugar"],
+    "category": "SWEETENER",
+    "commonUnits": ["cup", "tbsp", "tsp", "g"],
+    "shelfLife": {"pantry": 3650, "refrigerated": 3650, "frozen": 3650},
+    "flavorProfile": ["sweet"]
+  },
+  {
+    "name": "brown sugar",
+    "aliases": [],
+    "category": "SWEETENER",
+    "commonUnits": ["cup", "tbsp", "tsp", "g"],
+    "shelfLife": {"pantry": 730, "refrigerated": 730, "frozen": 730},
+    "flavorProfile": ["sweet", "caramel"]
+  }
+]

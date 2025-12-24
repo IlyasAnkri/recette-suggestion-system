@@ -1,0 +1,57 @@
+<mat-drawer-container class="substitution-container" [hasBackdrop]="true">
+  <mat-drawer #drawer mode="over" position="end" [opened]="opened" (closed)="onClose()">
+    <div class="panel-header">
+      <h2>Ingredient Substitutions</h2>
+      <button mat-icon-button (click)="drawer.close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="panel-content">
+      @if (missingIngredients.length === 0) {
+        <p class="no-missing">All ingredients are available!</p>
+      } @else {
+        <p class="missing-info">
+          <mat-icon>info</mat-icon>
+          Missing ingredients: {{ missingIngredients.join(', ') }}
+        </p>
+        <p class="ai-info">
+          <mat-icon>psychology</mat-icon>
+          AI-powered substitutions from Ollama (Llama 3.1)
+        </p>
+        
+        @for (sub of substitutions; track sub.ingredient) {
+          <div class="substitution-group">
+            <h3>{{ sub.ingredient }}</h3>
+            
+            @if (sub.loading) {
+              <div class="loading-substitutes">
+                <mat-spinner diameter="30"></mat-spinner>
+                <p>AI is finding substitutions...</p>
+              </div>
+            } @else {
+              @for (substitute of sub.substitutes; track substitute.name) {
+                <mat-list-item class="substitute-item">
+                  <div class="substitute-content">
+                    <div class="substitute-header">
+                      <strong>{{ substitute.name }}</strong>
+                      <mat-chip>{{ substitute.ratio }}</mat-chip>
+                    </div>
+                    <p class="explanation">{{ substitute.explanation }}</p>
+                    <button 
+                      mat-stroked-button 
+                      color="primary"
+                      (click)="useSubstitution(sub.ingredient, substitute.name)">
+                      Use This Substitution
+                    </button>
+                  </div>
+                </mat-list-item>
+              }
+            }
+          </div>
+        }
+      }
+    </div>
+  </mat-drawer>
+  <mat-drawer-content></mat-drawer-content>
+</mat-drawer-container>

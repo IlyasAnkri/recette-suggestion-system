@@ -1,0 +1,11 @@
+# Netlify redirects for Angular SPA routing
+# This ensures all routes are handled by Angular Router
+
+# API proxy to backend (optional, if using relative URLs)
+/api/*  https://recipe-adjuster-api-gateway.onrender.com/:splat  200
+
+# Service Worker
+/ngsw.json  /ngsw.json  200
+
+# All other routes go to index.html for Angular routing
+/*  /index.html  200

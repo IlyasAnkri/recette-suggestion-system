@@ -1,0 +1,41 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging Environment
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Deploy Backend to Render Staging
+        run: |
+          echo "Deploying backend services to staging..."
+          curl -X POST "${{ secrets.RENDER_STAGING_DEPLOY_HOOK_URL }}"
+      
+      - name: Deploy Frontend to Netlify Staging
+        run: |
+          echo "Deploying frontend to staging..."
+          curl -X POST "${{ secrets.NETLIFY_STAGING_BUILD_HOOK_URL }}"
+      
+      - name: Wait for deployments
+        run: sleep 120
+      
+      - name: Run E2E Tests
+        run: |
+          echo "Running E2E tests against staging..."
+          # Placeholder for actual E2E tests
+          echo "✅ E2E tests would run here"
+      
+      - name: Post deployment summary
+        run: |
+          echo "## Staging Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** develop" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Staging URL:** https://staging.recipe-adjuster.com" >> $GITHUB_STEP_SUMMARY

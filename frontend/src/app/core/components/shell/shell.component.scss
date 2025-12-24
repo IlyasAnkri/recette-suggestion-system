@@ -1,0 +1,70 @@
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.register-btn {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  mat-icon {
+    margin: 0;
+  }
+}
+
+.login-btn {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  mat-icon {
+    margin: 0;
+  }
+}
+
+.user-info {
+  padding: 8px 16px;
+  cursor: default;
+  opacity: 1 !important;
+}
+
+.sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1rem;
+  background: #fafafa;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 200px;
+  }
+  
+  .main-content {
+    padding: 0.5rem;
+  }
+}

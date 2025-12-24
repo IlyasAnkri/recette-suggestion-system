@@ -1,0 +1,91 @@
+name: Performance Tests
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly on Sunday at 2 AM
+  workflow_dispatch:
+    inputs:
+      loadProfile:
+        description: 'Load profile to run'
+        required: true
+        default: 'normal'
+        type: choice
+        options:
+          - normal
+          - peak
+          - stress
+          - mixed
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Run Performance Tests
+        run: |
+          cd performance-tests
+          mvn clean gatling:test \
+            -DloadProfile=${{ github.event.inputs.loadProfile || 'normal' }} \
+            -DbaseUrl=${{ secrets.TEST_ENV_URL }}
+
+      - name: Upload Gatling Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: gatling-results-${{ github.event.inputs.loadProfile || 'normal' }}
+          path: performance-tests/target/gatling/
+          retention-days: 30
+
+      - name: Check Performance Thresholds
+        run: |
+          # Extract metrics from Gatling report
+          REPORT_DIR=$(ls -td performance-tests/target/gatling/*/ | head -1)
+          
+          # Check if P99 < 2000ms
+          P99=$(grep -oP 'response time 99th percentile\s+\K\d+' ${REPORT_DIR}simulation.log || echo "0")
+          if [ "$P99" -gt 2000 ]; then
+            echo "::error::P99 response time ($P99 ms) exceeds threshold (2000 ms)"
+            exit 1
+          fi
+          
+          # Check if success rate > 95%
+          SUCCESS_RATE=$(grep -oP 'successful requests percent\s+\K[\d.]+' ${REPORT_DIR}simulation.log || echo "0")
+          if (( $(echo "$SUCCESS_RATE < 95" | bc -l) )); then
+            echo "::error::Success rate ($SUCCESS_RATE%) below threshold (95%)"
+            exit 1
+          fi
+          
+          echo "✅ Performance tests passed!"
+          echo "P99: ${P99}ms, Success Rate: ${SUCCESS_RATE}%"
+
+      - name: Comment PR with Results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportDir = fs.readdirSync('performance-tests/target/gatling/')
+              .filter(f => f.startsWith('recipeadjustersimulation-'))[0];
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 📊 Performance Test Results\n\nLoad Profile: **${{ github.event.inputs.loadProfile }}**\n\n[View Full Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`
+            });

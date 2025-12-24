@@ -1,0 +1,31 @@
+<div class="recipe-search-container">
+  <h1>Recipe Results</h1>
+  
+  @if (loading() && recipes().length === 0) {
+    <app-loading-spinner [message]="'Finding recipes...'"></app-loading-spinner>
+  } @else {
+    <div class="recipes-grid">
+      @for (recipe of recipes(); track recipe.id) {
+        <app-recipe-card 
+          [recipe]="recipe"
+          (cardClick)="onRecipeClick($event)"
+          loading="lazy">
+        </app-recipe-card>
+      }
+    </div>
+
+    @if (loading()) {
+      <div class="loading-more">
+        <app-loading-spinner [diameter]="40" [message]="'Loading more...'"></app-loading-spinner>
+      </div>
+    }
+
+    @if (recipes().length === 0 && !loading()) {
+      <div class="no-results">
+        <mat-icon>search_off</mat-icon>
+        <h2>No recipes found</h2>
+        <p>Try adjusting your ingredients or filters</p>
+      </div>
+    }
+  }
+</div>

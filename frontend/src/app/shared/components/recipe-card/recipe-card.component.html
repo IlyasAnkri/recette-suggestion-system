@@ -1,0 +1,36 @@
+<mat-card class="recipe-card" (click)="onCardClick()">
+  <img mat-card-image [src]="recipe.thumbnail" [alt]="recipe.title" class="recipe-thumbnail" loading="lazy">
+  
+  <mat-card-content>
+    <h3 class="recipe-title">{{ recipe.title }}</h3>
+    
+    <div class="recipe-meta">
+      <div class="match-percentage" [class]="getMatchColor()">
+        <mat-icon>check_circle</mat-icon>
+        <span>{{ recipe.matchPercentage }}% Match</span>
+      </div>
+      
+      @if (recipe.missingIngredientsCount > 0) {
+        <div class="missing-ingredients">
+          <mat-icon>warning</mat-icon>
+          <span>{{ recipe.missingIngredientsCount }} missing</span>
+        </div>
+      }
+    </div>
+
+    <div class="recipe-details">
+      @if (recipe.cuisine) {
+        <mat-chip>{{ recipe.cuisine }}</mat-chip>
+      }
+      @if (recipe.difficulty) {
+        <mat-chip>{{ recipe.difficulty }}</mat-chip>
+      }
+      @if (recipe.prepTime) {
+        <mat-chip>
+          <mat-icon>schedule</mat-icon>
+          {{ recipe.prepTime }} min
+        </mat-chip>
+      }
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,42 @@
+story: 2.5
+epic: 2
+title: Optimize MongoDB Queries and Add Caching Layer
+decision: CONCERNS
+reviewer: Quinn (QA)
+date: 2025-12-21
+updated: 2025-12-21T13:30:00Z
+rationale:
+  - Compound indexes properly configured for common query patterns
+  - Redis caching implemented with appropriate TTLs (15m search, 1h popular, 7d embeddings)
+  - Popular recipe cache-aside service created with @Cacheable pattern
+  - Embeddings cache region configured
+  - Cache metrics require runtime monitoring infrastructure
+  - Metrics approach documented with Spring Boot Actuator integration
+must_fix:
+  - None for current development phase
+production_requirements:
+  - Set up Prometheus/Grafana for cache metrics monitoring
+  - Add Micrometer CacheMetrics binder configuration
+  - Add custom timers for query latency measurement
+  - Implement cache statistics logging
+  - Create integration tests for cache behavior (hit/miss/TTL/invalidation)
+  - Run load tests to measure p95 latency with production traffic patterns
+evidence:
+  - services/recipe-search-service/src/main/java/com/recipeadjuster/recipe/config/RedisConfig.java (embeddings cache with 7d TTL)
+  - services/recipe-search-service/src/main/java/com/recipeadjuster/recipe/service/RecipeCacheService.java (popular recipe cache-aside)
+  - services/recipe-search-service/src/main/resources/application.yml (Actuator metrics enabled)
+  - docs/stories/2.5-query-optimization-caching.story.md (metrics approach documented)
+quality_score: 85
+nfr_validation:
+  security:
+    status: PASS
+    notes: Redis connection properly configured with environment variables
+  performance:
+    status: CONCERNS
+    notes: Caching infrastructure in place; p95 latency measurement requires production monitoring
+  reliability:
+    status: PASS
+    notes: Cache TTLs configured appropriately; fallback to database on cache miss
+  maintainability:
+    status: PASS
+    notes: Clean cache configuration; Spring Cache abstraction used properly

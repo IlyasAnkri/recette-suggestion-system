@@ -1,0 +1,18 @@
+schema: 1
+story: "6.1"
+story_title: "Story 6.1: Implement Recipe Database Service with CRUD Endpoints"
+gate: "PASS"
+status_reason: "All CRUD endpoints, authorization checks, and default approval flag are implemented and covered by integration tests; no blocking risks identified for this scope."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-12-21T17:46:00Z"
+waiver: { active: false }
+top_issues: []
+risk_summary:
+  totals: { critical: 0, high: 0, medium: 0, low: 0 }
+  recommendations:
+    must_fix: []
+    monitor: []
+recommendations:
+  immediate: []
+  future:
+    - "Add security-focused tests once API Gateway and JWT auth are wired to this service."

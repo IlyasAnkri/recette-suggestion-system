@@ -1,0 +1,20 @@
+schema: 1
+story: "5.9"
+story_title: "Story 5.9: Optimize Performance and Lighthouse Score"
+gate: "CONCERNS"
+status_reason: "Lazy loading and SSR are in place, but broader optimization tasks and metrics are not yet complete."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-12-21T16:20:00Z"
+waiver: { active: false }
+top_issues: []
+risk_summary:
+  totals: { critical: 0, high: 0, medium: 1, low: 0 }
+  recommendations:
+    must_fix:
+      - "Complete image, bundle, and preloading optimizations and verify Lighthouse scores."
+    monitor: []
+recommendations:
+  immediate: []
+  future:
+    - action: "Introduce automated performance checks in CI (e.g., Lighthouse CI)."
+      refs: []

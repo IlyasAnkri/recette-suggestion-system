@@ -1,0 +1,222 @@
+[
+  {
+    "originalIngredientName": "butter",
+    "substituteIngredientName": "olive oil",
+    "conversionRatio": "3/4 cup for 1 cup",
+    "compatibilityScore": 0.85,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free"],
+    "explanation": "Olive oil provides moisture but adds distinct flavor, best for savory dishes",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "butter",
+    "substituteIngredientName": "coconut oil",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.95,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free"],
+    "explanation": "Similar fat content and melting point, works well in baking",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "butter",
+    "substituteIngredientName": "applesauce",
+    "conversionRatio": "1/2 cup for 1 cup",
+    "compatibilityScore": 0.75,
+    "flavorImpact": "minimal",
+    "textureImpact": "moderate",
+    "dietaryTags": ["vegan", "low-fat"],
+    "explanation": "Reduces fat content, adds moisture, works well in cakes and muffins",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "milk",
+    "substituteIngredientName": "almond milk",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.9,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free", "nut-based"],
+    "explanation": "Dairy-free alternative with similar consistency",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "milk",
+    "substituteIngredientName": "oat milk",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.92,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free"],
+    "explanation": "Creamy texture similar to dairy milk, neutral flavor",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "milk",
+    "substituteIngredientName": "coconut milk",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.88,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free"],
+    "explanation": "Rich and creamy, adds subtle coconut flavor",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "eggs",
+    "substituteIngredientName": "flax egg",
+    "conversionRatio": "1 tbsp ground flax + 3 tbsp water per egg",
+    "compatibilityScore": 0.85,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan"],
+    "explanation": "Flax provides binding similar to eggs, works well in baking",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "eggs",
+    "substituteIngredientName": "chia egg",
+    "conversionRatio": "1 tbsp chia seeds + 3 tbsp water per egg",
+    "compatibilityScore": 0.83,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan"],
+    "explanation": "Similar binding properties to flax eggs",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "eggs",
+    "substituteIngredientName": "applesauce",
+    "conversionRatio": "1/4 cup per egg",
+    "compatibilityScore": 0.78,
+    "flavorImpact": "minimal",
+    "textureImpact": "moderate",
+    "dietaryTags": ["vegan"],
+    "explanation": "Adds moisture and binding, best for cakes and quick breads",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "eggs",
+    "substituteIngredientName": "mashed banana",
+    "conversionRatio": "1/4 cup per egg",
+    "compatibilityScore": 0.75,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan"],
+    "explanation": "Provides binding and moisture, adds banana flavor",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "heavy cream",
+    "substituteIngredientName": "coconut cream",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.9,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["vegan", "dairy-free"],
+    "explanation": "Rich and thick, similar consistency to heavy cream",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "sour cream",
+    "substituteIngredientName": "greek yogurt",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.95,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["high-protein"],
+    "explanation": "Similar tanginess and texture, higher protein content",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "all-purpose flour",
+    "substituteIngredientName": "almond flour",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.7,
+    "flavorImpact": "moderate",
+    "textureImpact": "significant",
+    "dietaryTags": ["gluten-free", "keto", "low-carb"],
+    "explanation": "Gluten-free alternative, denser texture, nutty flavor",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "all-purpose flour",
+    "substituteIngredientName": "coconut flour",
+    "conversionRatio": "1/4 cup for 1 cup",
+    "compatibilityScore": 0.65,
+    "flavorImpact": "moderate",
+    "textureImpact": "significant",
+    "dietaryTags": ["gluten-free", "keto", "low-carb"],
+    "explanation": "Very absorbent, requires less quantity and more liquid",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "white sugar",
+    "substituteIngredientName": "honey",
+    "conversionRatio": "3/4 cup for 1 cup",
+    "compatibilityScore": 0.8,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["natural-sweetener"],
+    "explanation": "Natural sweetener, adds moisture, reduce liquid in recipe",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "white sugar",
+    "substituteIngredientName": "maple syrup",
+    "conversionRatio": "3/4 cup for 1 cup",
+    "compatibilityScore": 0.78,
+    "flavorImpact": "moderate",
+    "textureImpact": "minimal",
+    "dietaryTags": ["natural-sweetener", "vegan"],
+    "explanation": "Natural sweetener with distinct flavor, reduce liquid slightly",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "vegetable oil",
+    "substituteIngredientName": "avocado oil",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.95,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["healthy-fat"],
+    "explanation": "High smoke point, neutral flavor, healthier fat profile",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "breadcrumbs",
+    "substituteIngredientName": "crushed cornflakes",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.85,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["gluten-free"],
+    "explanation": "Provides similar crunch and coating",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "mayonnaise",
+    "substituteIngredientName": "greek yogurt",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.82,
+    "flavorImpact": "minimal",
+    "textureImpact": "minimal",
+    "dietaryTags": ["low-fat", "high-protein"],
+    "explanation": "Lower fat alternative with similar creaminess",
+    "aiGenerated": false
+  },
+  {
+    "originalIngredientName": "chicken breast",
+    "substituteIngredientName": "tofu",
+    "conversionRatio": "1:1",
+    "compatibilityScore": 0.75,
+    "flavorImpact": "significant",
+    "textureImpact": "moderate",
+    "dietaryTags": ["vegan", "vegetarian"],
+    "explanation": "Plant-based protein, absorbs marinades well",
+    "aiGenerated": false
+  }
+]

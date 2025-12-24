@@ -1,0 +1,29 @@
+schema: 1
+story: "6.4"
+story_title: "Story 6.4: Implement Recipe Rating System"
+gate: "CONCERNS"
+status_reason: "Rating domain model and service logic are implemented, but there is no automated test coverage for rating flows and story tasks are not aligned with the implementation."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-12-21T17:46:00Z"
+waiver: { active: false }
+top_issues:
+  - id: "RAT-001"
+    severity: high
+    finding: "No unit/integration tests cover rating creation, updates, self-rating prevention, or validation failures."
+    suggested_action: "Add focused tests for first-time rating, rating updates, self-rating (403), and invalid rating values."
+  - id: "RAT-002"
+    severity: medium
+    finding: "Story task checkboxes remain unchecked despite implementation being present, which can confuse reviewers about actual status."
+    suggested_action: "Align Tasks / Dev Notes / implementation so the story accurately reflects what is done."
+risk_summary:
+  totals: { critical: 0, high: 1, medium: 1, low: 0 }
+  recommendations:
+    must_fix:
+      - "Introduce automated tests for all critical rating flows before treating this feature as production-ready."
+    monitor:
+      - "Monitor rating data quality (e.g., suspicious patterns, abuse) once traffic increases."
+recommendations:
+  immediate:
+    - "Ensure story Tasks are updated to match the implemented behavior to reduce process risk."
+  future:
+    - "Consider rate-limiting or abuse detection for rating endpoints."

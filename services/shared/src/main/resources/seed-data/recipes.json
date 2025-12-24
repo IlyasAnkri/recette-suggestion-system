@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Classic Spaghetti Carbonara",
+    "slug": "classic-spaghetti-carbonara",
+    "description": "Traditional Italian pasta with eggs, cheese, and pancetta",
+    "ingredients": [
+      {"name": "spaghetti", "quantity": 400, "unit": "g", "optional": false},
+      {"name": "pancetta", "quantity": 200, "unit": "g", "optional": false},
+      {"name": "eggs", "quantity": 4, "unit": "whole", "optional": false},
+      {"name": "parmesan cheese", "quantity": 100, "unit": "g", "optional": false},
+      {"name": "black pepper", "quantity": 1, "unit": "tsp", "optional": false}
+    ],
+    "instructions": [
+      {"stepNumber": 1, "description": "Cook spaghetti in salted boiling water until al dente", "durationMinutes": 10},
+      {"stepNumber": 2, "description": "Fry pancetta until crispy", "durationMinutes": 5},
+      {"stepNumber": 3, "description": "Mix eggs and parmesan in a bowl", "durationMinutes": 2},
+      {"stepNumber": 4, "description": "Combine hot pasta with pancetta, then add egg mixture off heat", "durationMinutes": 3}
+    ],
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "categories": ["Pasta", "Main Course"],
+    "tags": ["italian", "pasta", "quick", "comfort-food"],
+    "isApproved": true
+  },
+  {
+    "title": "Margherita Pizza",
+    "slug": "margherita-pizza",
+    "description": "Classic Neapolitan pizza with tomato, mozzarella, and basil",
+    "ingredients": [
+      {"name": "pizza dough", "quantity": 500, "unit": "g", "optional": false},
+      {"name": "tomato sauce", "quantity": 200, "unit": "ml", "optional": false},
+      {"name": "mozzarella cheese", "quantity": 250, "unit": "g", "optional": false},
+      {"name": "basil", "quantity": 10, "unit": "leaves", "optional": false},
+      {"name": "olive oil", "quantity": 2, "unit": "tbsp", "optional": false}
+    ],
+    "instructions": [
+      {"stepNumber": 1, "description": "Preheat oven to 250°C", "durationMinutes": 15},
+      {"stepNumber": 2, "description": "Roll out pizza dough", "durationMinutes": 5},
+      {"stepNumber": 3, "description": "Spread tomato sauce and add mozzarella", "durationMinutes": 3},
+      {"stepNumber": 4, "description": "Bake for 10-12 minutes until crust is golden", "durationMinutes": 12}
+    ],
+    "prepTime": 20,
+    "cookTime": 12,
+    "servings": 2,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "categories": ["Pizza", "Main Course"],
+    "tags": ["italian", "pizza", "vegetarian"],
+    "isApproved": true
+  },
+  {
+    "title": "Chicken Tikka Masala",
+    "slug": "chicken-tikka-masala",
+    "description": "Creamy Indian curry with marinated chicken in spiced tomato sauce",
+    "ingredients": [
+      {"name": "chicken breast", "quantity": 600, "unit": "g", "optional": false},
+      {"name": "yogurt", "quantity": 200, "unit": "ml", "optional": false},
+      {"name": "tomato sauce", "quantity": 400, "unit": "ml", "optional": false},
+      {"name": "heavy cream", "quantity": 150, "unit": "ml", "optional": false},
+      {"name": "garam masala", "quantity": 2, "unit": "tsp", "optional": false},
+      {"name": "garlic", "quantity": 4, "unit": "cloves", "optional": false},
+      {"name": "ginger", "quantity": 1, "unit": "tbsp", "optional": false},
+      {"name": "onion", "quantity": 1, "unit": "whole", "optional": false}
+    ],
+    "instructions": [
+      {"stepNumber": 1, "description": "Marinate chicken in yogurt and spices for 30 minutes", "durationMinutes": 30},
+      {"stepNumber": 2, "description": "Grill or pan-fry chicken until cooked", "durationMinutes": 15},
+      {"stepNumber": 3, "description": "Sauté onions, garlic, and ginger", "durationMinutes": 5},
+      {"stepNumber": 4, "description": "Add tomato sauce and spices, simmer", "durationMinutes": 10},
+      {"stepNumber": 5, "description": "Add cream and chicken, simmer for 5 minutes", "durationMinutes": 5}
+    ],
+    "prepTime": 40,
+    "cookTime": 35,
+    "servings": 4,
+    "difficulty": "MEDIUM",
+    "cuisine": "Asian",
+    "categories": ["Curry", "Main Course"],
+    "tags": ["indian", "curry", "chicken", "spicy"],
+    "isApproved": true
+  },
+  {
+    "title": "Beef Tacos",
+    "slug": "beef-tacos",
+    "description": "Mexican street-style tacos with seasoned ground beef",
+    "ingredients": [
+      {"name": "ground beef", "quantity": 500, "unit": "g", "optional": false},
+      {"name": "taco shells", "quantity": 8, "unit": "whole", "optional": false},
+      {"name": "lettuce", "quantity": 1, "unit": "cup", "optional": false},
+      {"name": "tomato", "quantity": 2, "unit": "whole", "optional": false},
+      {"name": "cheddar cheese", "quantity": 100, "unit": "g", "optional": false},
+      {"name": "sour cream", "quantity": 100, "unit": "ml", "optional": true},
+      {"name": "cumin", "quantity": 1, "unit": "tsp", "optional": false},
+      {"name": "chili powder", "quantity": 1, "unit": "tsp", "optional": false}
+    ],
+    "instructions": [
+      {"stepNumber": 1, "description": "Brown ground beef in a pan", "durationMinutes": 8},
+      {"stepNumber": 2, "description": "Add spices and cook for 2 minutes", "durationMinutes": 2},
+      {"stepNumber": 3, "description": "Warm taco shells", "durationMinutes": 2},
+      {"stepNumber": 4, "description": "Assemble tacos with beef and toppings", "durationMinutes": 3}
+    ],
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": 4,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "categories": ["Tacos", "Main Course"],
+    "tags": ["mexican", "tacos", "beef", "quick"],
+    "isApproved": true
+  },
+  {
+    "title": "Greek Salad",
+    "slug": "greek-salad",
+    "description": "Fresh Mediterranean salad with feta cheese and olives",
+    "ingredients": [
+      {"name": "cucumber", "quantity": 2, "unit": "whole", "optional": false},
+      {"name": "tomato", "quantity": 4, "unit": "whole", "optional": false},
+      {"name": "red onion", "quantity": 1, "unit": "whole", "optional": false},
+      {"name": "feta cheese", "quantity": 200, "unit": "g", "optional": false},
+      {"name": "kalamata olives", "quantity": 100, "unit": "g", "optional": false},
+      {"name": "olive oil", "quantity": 3, "unit": "tbsp", "optional": false},
+      {"name": "lemon juice", "quantity": 2, "unit": "tbsp", "optional": false},
+      {"name": "oregano", "quantity": 1, "unit": "tsp", "optional": false}
+    ],
+    "instructions": [
+      {"stepNumber": 1, "description": "Chop all vegetables into bite-sized pieces", "durationMinutes": 10},
+      {"stepNumber": 2, "description": "Combine vegetables, feta, and olives in a bowl", "durationMinutes": 2},
+      {"stepNumber": 3, "description": "Drizzle with olive oil and lemon juice", "durationMinutes": 1},
+      {"stepNumber": 4, "description": "Season with oregano and toss", "durationMinutes": 1}
+    ],
+    "prepTime": 15,
+    "cookTime": 0,
+    "servings": 4,
+    "difficulty": "EASY",
+    "cuisine": "Mediterranean",
+    "categories": ["Salad", "Side Dish"],
+    "tags": ["mediterranean", "salad", "vegetarian", "healthy", "no-cook"],
+    "isApproved": true
+  }
+]
