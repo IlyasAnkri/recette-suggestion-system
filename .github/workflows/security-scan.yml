@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: ZAP Full Scan
-        uses: zaproxy/action-full-scan@v0.8.0
+        uses: zaproxy/action-full-scan@v0.13.0
         with:
           target: 'https://recipe-adjuster.netlify.app'
           rules_file_name: '.zap/rules.tsv'
